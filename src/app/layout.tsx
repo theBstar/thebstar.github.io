@@ -1,22 +1,47 @@
 import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Inter, Inter_Tight } from "next/font/google";
 import "./globals.css";
+import JsonLd from "@/components/JsonLd";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const interTight = Inter_Tight({
+  subsets: ["latin"],
+  variable: "--font-inter-tight",
 });
 
 export const metadata: Metadata = {
-  title: "Bikram Sutar",
-  description: "Bikram Sutar's personal website. A hustler and a builder who loves to make an impact in people's lives.",
+  title: "Bikram Sutar | Founding Engineer & AI Startup Enthusiast",
+  description: "Bikram Sutar is a '0 to 1' product engineer specializing in Agentic UIs and startup architecture. Previously #1 at Houseware and #3 at OrangeHealth (YC S20). Building for the future from stealth.",
+  keywords: ["Bikram Sutar", "Thebstar", "Founding Engineer", "Houseware", "LaunchDarkly", "Agentic UI", "AI Startups", "Product Engineer", "OrangeHealth Labs", "Developer Experience"],
+  authors: [{ name: "Bikram Sutar" }],
+  creator: "Bikram Sutar",
+  publisher: "Bikram Sutar",
+  alternates: {
+    canonical: "https://thebstar.com",
+  },
+  openGraph: {
+    title: "Bikram Sutar | Building from 0 to 1",
+    description: "Founding Engineer focusing on Agentic UIs and high-growth startup architecture. Previously @ LaunchDarkly, Houseware, and OrangeHealth.",
+    url: "https://thebstar.com",
+    siteName: "Bikram Sutar Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bikram Sutar | Chief Experimenter @ Stealth",
+    description: "Building from 0 to 1 since 2018. AI & Startup enthusiast, runner, and community builder.",
+    creator: "@thebstar13",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -25,13 +50,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${interTight.variable} font-sans antialiased`}
       >
+        <JsonLd />
         {children}
+        <GoogleAnalytics gaId="G-6K53Q5XBV4" />
       </body>
-      <GoogleAnalytics gaId="G-6K53Q5XBV4" />
     </html>
   );
 }
+
