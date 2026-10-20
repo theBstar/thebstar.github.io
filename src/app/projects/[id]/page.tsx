@@ -8,6 +8,12 @@ interface ProjectLinks {
   website?: string;
 }
 
+interface Post {
+  title: string;
+  url: string;
+  date?: string;
+}
+
 interface Project {
   title: string;
   role: string;
@@ -15,24 +21,33 @@ interface Project {
   tech: string[];
   impact: string;
   links: ProjectLinks;
+  posts?: Post[];
 }
 
 const projectsData: Record<string, Project> = {
+  suvi: {
+    title: "Suvi",
+    role: "Founder",
+    description: "An Android launcher for children that replaces blanket parental controls with earned freedom. Reading, learning apps and time outdoors earn points toward a real-world reward the child chooses, while demonstrated responsibility unlocks phone features one at a time.",
+    tech: ["Android", "Kotlin", "Astro"],
+    impact: "Shaped by workshops with 100+ kids since 2024. Launching software first, on a phone the family already owns.",
+    links: { website: "https://mysuvi.com/" }
+  },
   numen: {
     title: "Numen",
-    role: "Core Contributor",
-    description: "A specialist design-engineering collective focused on building high-performance, aesthetically exceptional digital interfaces. We bridge the gap between creative vision and technical execution.",
-    tech: ["Next.js", "Three.js", "Framer Motion", "Tailwind"],
-    impact: "Redefining how early-stage startups and creative agencies approach interactive storytelling and performance-first web experiences.",
-    links: { website: "https://numen.team" }
+    role: "Creator",
+    description: "Proactive work intelligence for engineering teams. Numen connects Linear, GitHub, Slack, Jira, Notion and Google Docs into one context graph, scores what deserves attention, and answers in Slack. Search tools answer when you ask. Numen tells you before you ask.",
+    tech: ["Python", "FastAPI", "MCP", "Docker"],
+    impact: "Open source and self-hosted under AGPL-3.0. The only network egress is to the LLM endpoint you configure, which can run on your own hardware.",
+    links: { github: "https://github.com/theBstar/numen" }
   },
-  hoply: {
-    title: "Hoply",
-    role: "Architect",
-    description: "A radically simplified e-commerce stack designed for high-growth brands. Hoply abstracts the complexity of headless commerce into a high-speed, manageable framework.",
-    tech: ["React", "Node.js", "GraphQL", "Redis"],
-    impact: "Enabling brands to deploy high-conversion shops in a fraction of the time, with 99.9th percentile performance metrics.",
-    links: { website: "https://gethoply.com" }
+  shipreel: {
+    title: "Shipreel",
+    role: "Creator",
+    description: "An agent skill that turns a pull request into a short narrated walkthrough video. Your coding agent reads the diff, writes the story, draws the diagrams, records the real app if the change has a UI, and renders a compact MP4 with captions and an ambient music bed.",
+    tech: ["Node.js", "Puppeteer", "ffmpeg", "Agent Skills"],
+    impact: "Free and local by default: no API keys, no uploads. Reviewers watch the change instead of reverse-engineering it. Works with Claude Code, Codex, Cursor and other agents.",
+    links: { github: "https://github.com/theBstar/shipreel", website: "https://www.thebstar.com/shipreel/" }
   },
   houseware: {
     title: "Houseware Analytics",
@@ -56,15 +71,8 @@ const projectsData: Record<string, Project> = {
     description: "A series of high-stakes experiments in agentic UI, browser-based automation, and local LLM orchestration. Exploring the edge of human-machine intent synchronization.",
     tech: ["Python", "Ollama", "LangChain", "Puppeteer"],
     impact: "Prototyped several browser-agent hacks that automate complex multi-step workflows directly in the viewport.",
-    links: { website: "https://x.com/thebstar13/status/1844012117591695640" }
-  },
-  hamigorkhali: {
-    title: "Hami Gorkhali",
-    role: "Founder & Lead",
-    description: "The digital home for the Indian Gorkha Diaspora. A platform designed to connect thousands of community members, share heritage, and coordinate social initiatives.",
-    tech: ["Next.js", "Firebase", "TypeScript", "Tailwind"],
-    impact: "Grown to be the primary digital touchpoint for the community, facilitating local events and cultural preservation programs.",
-    links: { website: "https://hamigorkhali.com" }
+    links: { website: "https://x.com/thebstar13/status/1844012117591695640" },
+    posts: []
   }
 };
 

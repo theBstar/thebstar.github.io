@@ -25,7 +25,7 @@ export default function JsonLd() {
     ],
     "worksFor": {
       "@type": "Organization",
-      "name": "Stealth Startup"
+      "name": "Orcana"
     },
     "alumniOf": [
       {

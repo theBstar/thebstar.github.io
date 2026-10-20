@@ -1,4 +1,4 @@
-import { ExternalLink, Github, LucideIcon, BarChart, Activity, ShoppingBag, Layers, Heart, Wand2 } from "lucide-react";
+import { ExternalLink, Github, LucideIcon, BarChart, Activity, Smartphone, Network, Clapperboard, Wand2 } from "lucide-react";
 import Link from "next/link";
 
 type Project = {
@@ -16,22 +16,32 @@ type Project = {
 
 const projects: Project[] = [
   {
-    id: "numen",
-    title: "Numen",
-    description: "Design-engineering collective building interfaces of tomorrow. Specialist focus on interaction design and performance.",
-    icon: Layers,
-    tags: ["Design", "Engineering", "Interface"],
-    website: "https://numen.team",
-    color: "text-primary",
+    id: "suvi",
+    title: "Suvi",
+    description: "Not parental control. Digital growing up. An Android launcher for kids that swaps blanket restrictions for freedom they earn.",
+    icon: Smartphone,
+    tags: ["Kids", "Android", "Founder"],
+    website: "https://mysuvi.com/",
+    color: "text-secondary",
     isNew: true,
   },
   {
-    id: "hoply",
-    title: "Hoply",
-    description: "Simplified e-commerce stack for growing brands. Architecting tools for the next generation of online retail.",
-    icon: ShoppingBag,
-    tags: ["E-commerce", "SaaS", "Stack"],
-    website: "https://gethoply.com",
+    id: "numen",
+    title: "Numen",
+    description: "Proactive work intelligence for engineering teams. Connects your tools into one context graph and tells each person what deserves attention today.",
+    icon: Network,
+    tags: ["AI Agents", "Open Source", "Self-hosted"],
+    github: "https://github.com/theBstar/numen",
+    color: "text-primary",
+  },
+  {
+    id: "shipreel",
+    title: "Shipreel",
+    description: "Turn a pull request into a short narrated walkthrough video. An agent skill that runs locally and free, with zero setup on a Mac.",
+    icon: Clapperboard,
+    tags: ["Agent Skill", "Open Source", "DevTools"],
+    github: "https://github.com/theBstar/shipreel",
+    website: "https://www.thebstar.com/shipreel/",
     color: "text-secondary",
   },
   {
@@ -41,7 +51,7 @@ const projects: Project[] = [
     icon: BarChart,
     tags: ["Data", "Infrastructure", "Founding"],
     website: "https://houseware.io",
-    color: "text-secondary",
+    color: "text-primary",
   },
   {
     id: "orangehealth",
@@ -50,7 +60,7 @@ const projects: Project[] = [
     icon: Activity,
     tags: ["Health", "YC", "Leadership"],
     website: "https://orangehealth.in",
-    color: "text-primary",
+    color: "text-secondary",
   },
   {
     id: "ai-experiments",
@@ -59,15 +69,6 @@ const projects: Project[] = [
     icon: Wand2,
     tags: ["GenAI", "Agents", "Research"],
     website: "https://x.com/thebstar13/status/1844012117591695640",
-    color: "text-secondary",
-  },
-  {
-    id: "hamigorkhali",
-    title: "Hami Gorkhali",
-    description: "Community platform for the Indian Gorkha Diaspora. Bridging cultural heritage with modern digital connectivity.",
-    icon: Heart,
-    tags: ["Community", "Heritage", "Scale"],
-    website: "https://hamigorkhali.com",
     color: "text-primary",
   },
 ];
@@ -124,13 +125,13 @@ export default function Projects() {
             </Link>
             <div className="flex items-center gap-6">
               {project.github && (
-                <a href={project.github} className="text-muted-foreground hover:text-primary transition-all flex items-center gap-2 group/link">
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-all flex items-center gap-2 group/link">
                   <Github size={20} />
                   <span className="text-[10px] font-bold uppercase tracking-widest">Source</span>
                 </a>
               )}
-              {(project.website || project.github) && (
-                <a href={project.website || project.github} target="_blank" className="text-muted-foreground hover:text-primary transition-all flex items-center gap-2 group/link">
+              {project.website && (
+                <a href={project.website} target="_blank" className="text-muted-foreground hover:text-primary transition-all flex items-center gap-2 group/link">
                   <ExternalLink size={20} />
                   <span className="text-[10px] font-bold uppercase tracking-widest">Explore</span>
                 </a>

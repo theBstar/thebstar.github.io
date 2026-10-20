@@ -4,12 +4,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://thebstar.com'
   
   const projects = [
+    'suvi',
     'numen',
-    'hoply',
+    'shipreel',
     'houseware',
     'orangehealth',
-    'ai-experiments',
-    'hamigorkhali'
+    'ai-experiments'
   ]
 
   const projectUrls = projects.map((id) => ({
@@ -25,6 +25,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
+    },
+    {
+      url: `${baseUrl}/labs`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
     ...projectUrls,
   ]

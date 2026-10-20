@@ -2,13 +2,19 @@
 
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ArrowLeft, Github, Globe, Share2 } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Github, Globe, Share2 } from "lucide-react";
 import Link from "next/link";
 
 interface ProjectLinks {
   github?: string;
   twitter?: string;
   website?: string;
+}
+
+interface Post {
+  title: string;
+  url: string;
+  date?: string;
 }
 
 interface Project {
@@ -18,6 +24,7 @@ interface Project {
   tech: string[];
   impact: string;
   links: ProjectLinks;
+  posts?: Post[];
 }
 
 export default function ProjectDetail({ project }: { project: Project }) {
@@ -56,6 +63,27 @@ export default function ProjectDetail({ project }: { project: Project }) {
                      {project.impact}
                    </p>
                 </section>
+
+                {project.posts && project.posts.length > 0 && (
+                  <section className="space-y-4">
+                     <h2 className="text-sm md:text-xl font-headline font-bold uppercase tracking-widest text-muted-foreground">Posts</h2>
+                     <ul className="divide-y divide-white/10 border-y border-white/10">
+                        {project.posts.map(post => (
+                          <li key={post.url}>
+                            <a href={post.url} target="_blank" rel="noopener noreferrer" className="flex items-start justify-between gap-6 py-5 group">
+                              <span className="space-y-1">
+                                {post.date && (
+                                  <span className="block text-[10px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground">{post.date}</span>
+                                )}
+                                <span className="block text-lg md:text-xl leading-snug text-foreground group-hover:text-primary transition-colors">{post.title}</span>
+                              </span>
+                              <ArrowUpRight size={20} className="mt-1 shrink-0 text-muted-foreground group-hover:text-primary transition-colors" />
+                            </a>
+                          </li>
+                        ))}
+                     </ul>
+                  </section>
+                )}
              </div>
              
              <div className="space-y-10 md:space-y-12">

@@ -16,7 +16,7 @@ const interTight = Inter_Tight({
 
 export const metadata: Metadata = {
   title: "Bikram Sutar | Founding Engineer & AI Startup Enthusiast",
-  description: "Bikram Sutar is a '0 to 1' product engineer specializing in Agentic UIs and startup architecture. Previously #1 at Houseware and #3 at OrangeHealth (YC S20). Building for the future from stealth.",
+  description: "Bikram Sutar is a '0 to 1' product engineer specializing in Agentic UIs and startup architecture. Previously #1 at Houseware and #3 at OrangeHealth (YC S20). Now Founding Engineer at Orcana, leading product and engineering from India.",
   keywords: ["Bikram Sutar", "Thebstar", "Founding Engineer", "Houseware", "LaunchDarkly", "Agentic UI", "AI Startups", "Product Engineer", "OrangeHealth Labs", "Developer Experience"],
   authors: [{ name: "Bikram Sutar" }],
   creator: "Bikram Sutar",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bikram Sutar | Chief Experimenter @ Stealth",
+    title: "Bikram Sutar | Founding Engineer @ Orcana",
     description: "Building from 0 to 1 since 2018. AI & Startup enthusiast, runner, and community builder.",
     creator: "@thebstar13",
   },

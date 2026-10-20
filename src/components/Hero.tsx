@@ -41,7 +41,7 @@ export default function Hero() {
           
           <div className="max-w-2xl mx-auto lg:mx-0 py-6 md:py-8 border-l border-primary/20 pl-6 md:pl-8 mt-4">
             <p className="text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed">
-              From being the first hire at Houseware to engineering at LaunchDarkly and OrangeHealth, I’ve been building from 0 to 1 since 2018. I’m a startup enthusiast, a runner, and a chronic optimist currently working on something new in stealth. I’m also deeply passionate about community - whether it’s mentoring the next generation of builders or founding local clubs, I believe the ultimate value of life lies in our capacity to give back.
+              From being the first hire at Houseware to engineering at LaunchDarkly and OrangeHealth, I’ve been building from 0 to 1 since 2018. Today I’m the Founding Engineer at Orcana, leading product and engineering from India. I’m a startup enthusiast, a runner, and a chronic optimist. I’m also deeply passionate about community - whether it’s mentoring the next generation of builders or founding local clubs, I believe the ultimate value of life lies in our capacity to give back.
             </p>
           </div>
           <div className="flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6 pt-4">

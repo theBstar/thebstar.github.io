@@ -8,11 +8,17 @@ type Experience = {
 
 const experiences: Experience[] = [
   {
-    year: "2026 - Present",
-    role: "Founder",
-    company: "Stealth",
-    description: "Building the future of human productivity and AI interaction from the ground up.",
+    year: "Oct 2026 - Present",
+    role: "Founding Engineer",
+    company: "Orcana",
+    description: "Leading product and engineering from India.",
     isCurrent: true,
+  },
+  {
+    year: "Apr 2026 - Present",
+    role: "Chief Experiments Officer",
+    company: "thebstar labs",
+    description: "An independent lab building meaningful ventures for people I know: Ojas, Suvi and Saraighat.",
   },
   {
     year: "2025 - 2026",
