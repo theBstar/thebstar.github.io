@@ -32,9 +32,10 @@ export default function SaraighatPrivacy() {
           <li>whether you said yes to news by email, the language you play in, and whether you play on Android or iPhone.</li>
         </ul>
         <p>
-          <strong>What we use it for.</strong> To know who has an account, and, <em>only if you ticked the box to get
-          news</em>, to send you occasional emails about Saraighat and other OneHorn Labs projects. Every email has a
-          way to stop them, and you can also write to us. We never sell your email or give it to anyone else to
+          <strong>What we use it for.</strong> To know who has an account, and, <em>only if the box to get news was
+          left ticked when you signed in</em> (it starts ticked, and you can untick it there or any time in Settings ▸
+          Account ▸ News by email), to send you occasional emails about Saraighat and other OneHorn Labs projects. Every
+          email has a way to stop them, and you can also write to us. We never sell your email or give it to anyone else to
           market to you.
         </p>
       </Section>
