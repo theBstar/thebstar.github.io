@@ -32,7 +32,7 @@ export default function SaraighatDeleteAccount() {
 
       <Section title="What is deleted">
         <ul style={listStyle}>
-          <li>Your sign-in record: email address, account identifier, name and picture from Google or Apple, sign-in dates.</li>
+          <li>Your sign-in record: email address, account identifier, password hash (if you used a password), name and picture from Google or Apple (if you used them), sign-in dates.</li>
           <li>Your news choice, language and platform.</li>
         </ul>
         <p>

@@ -20,12 +20,14 @@ export default function SaraighatPrivacy() {
 
       <Section title="Signing in">
         <p>
-          The game asks you to sign in with Google (on Android), or with Google or Apple (on iPhone, where you can also
-          choose &ldquo;Not now&rdquo;). Sign-in is handled by Google Firebase Authentication. From it we keep:
+          The game asks you to sign in with Google (on Android) or Apple (on iPhone, where you can also choose
+          &ldquo;Not now&rdquo;), or with an email address and password on either. Sign-in is handled by Google
+          Firebase Authentication. If you use a password, Firebase keeps only a secure hash of it; we never see it.
+          From your sign-in we keep:
         </p>
         <ul style={listStyle}>
           <li>your email address (on iPhone, if you chose Apple&apos;s &ldquo;Hide My Email&rdquo;, the private relay address Apple gives us instead);</li>
-          <li>the name and picture your Google or Apple account shares, which we do not use or show;</li>
+          <li>if you sign in with Google or Apple, the name and picture your account shares, which we do not use or show;</li>
           <li>an account identifier, and when you signed up and last signed in;</li>
           <li>whether you said yes to news by email, the language you play in, and whether you play on Android or iPhone.</li>
         </ul>
