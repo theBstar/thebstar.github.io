@@ -64,16 +64,18 @@ const ventures: Venture[] = [
   },
   {
     kicker: "If you love a good story",
-    status: "In the works",
+    status: "In testing",
+    live: true,
     name: "Saraighat",
     body: "Sail with the Ahom navy on the Brahmaputra in 1671 and play the battle where Lachit Borphukan stopped the Mughal army.",
-    note: "Coming to Android and iPhone, in Assamese and English.",
+    note: "Being tested now. Coming to Android and iPhone, in Assamese and English.",
     cta: "About the game →",
     href: "/labs/saraighat/",
   },
 ];
 
 const updates = [
+  { date: "Nov 2026", text: "Saraighat goes into testing." },
   {
     date: "Sep 2026",
     text: "Ojas grows from a HYROX tracker into a daily check-in coach for any plan you make.",

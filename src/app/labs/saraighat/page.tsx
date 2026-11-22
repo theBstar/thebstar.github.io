@@ -28,7 +28,7 @@ export default function SaraighatPage() {
         narrated films, and every chapter of it you play: on foot, by stealth, and at the oars in the narrows.
         In Assamese and English.
       </p>
-      <p style={{ marginTop: 20, maxWidth: 640, color: "#A9B5A8" }}>Coming soon to Google Play and the App Store.</p>
+      <p style={{ marginTop: 20, maxWidth: 640, color: "#A9B5A8" }}>In testing now. Coming soon to Google Play and the App Store.</p>
       <div style={{ marginTop: 40, display: "flex", flexWrap: "wrap", gap: "12px 28px", fontWeight: 600 }}>
         <a href="/labs/saraighat/privacy/">Privacy policy</a>
         <a href="/labs/saraighat/delete-account/">Delete your account</a>
