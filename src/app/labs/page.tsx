@@ -67,8 +67,9 @@ const ventures: Venture[] = [
     status: "In the works",
     name: "Saraighat",
     body: "Sail with the Ahom navy on the Brahmaputra in 1671 and play the battle where Lachit Borphukan stopped the Mughal army.",
-    note: "A third-person game you can play in your browser.",
-    cta: "Follow the game →",
+    note: "Coming to Android and iPhone, in Assamese and English.",
+    cta: "About the game →",
+    href: "/labs/saraighat/",
   },
 ];
 

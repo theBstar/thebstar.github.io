@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const projectUrls = projects.map((id) => ({
-    url: `${baseUrl}/projects/${id}`,
+    url: `${baseUrl}/projects/${id}/`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
@@ -27,11 +27,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/labs`,
+      url: `${baseUrl}/labs/`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    ...['', 'privacy/', 'delete-account/'].map((p) => ({
+      url: `${baseUrl}/labs/saraighat/${p}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
     ...projectUrls,
   ]
 }
